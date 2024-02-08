@@ -187,7 +187,7 @@ const eliminarSensor = async (espacioId, sensorNombre) => {
                       <input v-if="espacio.Sensores && espacio.Sensores.length !== 0" type="text" v-model="estadoSensor"
                         placeholder="Modificar Nombre">
                       <button class="btn btn-primary"
-                        @click="modificarNombreSensor(espacio.id, sensor.nombre, estadoSensor)">
+                        @click="modificarNombreSensor(espacio.id, sensor.nombre, estadoSensor);  estadoSensor = '';">
                         Modificar Nombre
                       </button>
                       <button class="btn btn-danger btn-sm" @click="eliminarSensor(espacio.id, sensor.nombre)">
